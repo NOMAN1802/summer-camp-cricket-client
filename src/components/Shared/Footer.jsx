@@ -1,11 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import Container from './Container';
 
 const Footer = () => {
     return (
-        <div>
+        <Container>
             <h2>Footer</h2>
-        </div>
+        </Container>
     );
 };
 
