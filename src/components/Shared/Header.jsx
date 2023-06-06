@@ -1,15 +1,38 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../Pages/providers/AuthProvider';
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => { })
+      .catch(error => console.log(error));
+  }
+
     const navOptions = <>
     <li><NavLink to='/'>Home</NavLink></li>
     <li><NavLink to='/instructors'>Instructors</NavLink></li>
     <li><NavLink to='/classes'> Classes</NavLink></li>
 
     <li><Link to="/dashboard">Dashboard</Link></li>
-    <li><Link to="/login">Login</Link></li>
+    
+
+    {
+      user ? <>
+        <span className='m-auto mt-2'>{user?.displayName}</span>
+        <div className="avatar online w-12 mx-2 m-auto">
+          <div className="w-24 rounded-full">
+            <img src={user.photoURL} />
+          </div>
+        </div>
+        <button onClick={handleLogOut} className="btn btn-ghost m-auto">LogOut</button>
+      </> : <>
+        <li><Link to="/login">Login</Link></li>
+      </>
+    }
     
   </>
    

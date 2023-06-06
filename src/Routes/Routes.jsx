@@ -5,6 +5,7 @@ import Main from "../layouts/Main";
 import Home from "../Pages/Home/Home";
 import Classes from "../Pages/Classes/Classes";
 import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register"
 import DashboardLayOut from "../layouts/DashboardLayOut";
 
 
@@ -25,6 +26,10 @@ import DashboardLayOut from "../layouts/DashboardLayOut";
           path:'/login',
           element:<Login></Login>
         },
+        {
+         path:'/register',
+         element:<Register></Register>
+        }
         
       ]
     },
