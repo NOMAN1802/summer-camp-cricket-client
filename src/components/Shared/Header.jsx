@@ -7,6 +7,9 @@ const Header = () => {
     <li><NavLink to='/'>Home</NavLink></li>
     <li><NavLink to='/instructors'>Instructors</NavLink></li>
     <li><NavLink to='/classes'> Classes</NavLink></li>
+
+    <li><Link to="/dashboard">Dashboard</Link></li>
+    <li><Link to="/login">Login</Link></li>
     
   </>
    
@@ -15,7 +18,7 @@ const Header = () => {
 
     return (
         <div>
-        <div className="navbar bg-opacity-30 bg-black text-white ">
+        <div className="navbar bg-opacity-40 bg-black text-white ">
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -25,7 +28,8 @@ const Header = () => {
                 {navOptions}
               </ul>
             </div>
-            <a className="btn btn-ghost normal-case text-lg">Shakib Cricket Academy</a>
+            <img className='rounded-xl mr-4' src="https://i.ibb.co/w7tSfv2/1000-F-499625910-gh-BBx-V9-Rs-HAWLQVPJd-Tp-F49io-BP9ak1-Z.jpg" alt="" height={50} width={60} />
+            <Link className=" normal-case text-lg"><p className='font-bold text-stone-200'>SH75 <span className='text-blue-300'>Academy</span></p></Link>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
@@ -39,5 +43,5 @@ const Header = () => {
       </div>
     );
 };
-// https://i.ibb.co/w7tSfv2/1000-F-499625910-gh-BBx-V9-Rs-HAWLQVPJd-Tp-F49io-BP9ak1-Z.jpg
+
 export default Header;
