@@ -3,16 +3,18 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import Lottie from "lottie-react";
 import Swal from 'sweetalert2';
 import SocialLogin from '../../components/Shared/SocialLogin';
-
+import login from '../../assets/login.json'
+import { BsEye } from 'react-icons/bs'
 
 
 
 const Login = () => {
-
+   
     const { signIn } = useContext(AuthContext);
-    const [disabled, setDisabled] = useState(true);
+    const [viewPassword, setViewPassword] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -44,6 +46,10 @@ const Login = () => {
     }
 
 
+    const handleViewPassword  = () => {
+        setViewPassword(!viewPassword);
+      };
+
     return (
         <>
             <Helmet>
@@ -51,11 +57,11 @@ const Login = () => {
             </Helmet>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="text-center  md:w-1/2 lg:text-left">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                    <div className="text-center mr-8  md:w-1/2 lg:text-left">
+                    <Lottie animationData={login} loop={true} />
                     </div>
                     <div className="card md:w-1/2 w-full max-w-sm shadow-2xl bg-base-100">
+                    <h1 className="text-3xl font-bold text-blue-200 text-center pt-8">Login <span className='text-stone-200'>now!</span></h1>
                         <form onSubmit={handleLogin} className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -68,7 +74,10 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" name='password' placeholder="password" className="input input-bordered" />
+            
+                                    <input type={viewPassword ? 'text' : 'password'} name='password' placeholder="password" className="input input-bordered" />
+                                    <div onClick={handleViewPassword} className='mt-4 flex gap-4 items-center'><BsEye></BsEye> {viewPassword ? 'Hide' : 'Show'}</div>
+                                
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
