@@ -8,6 +8,7 @@ import Swal from 'sweetalert2';
 import SocialLogin from '../../components/Shared/SocialLogin';
 import login from '../../assets/login.json'
 import { BsEye } from 'react-icons/bs'
+import Container from '../../components/Shared/Container';
 
 
 
@@ -33,14 +34,14 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 Swal.fire({
-                    title: 'User Login Successful',
-                    showClass: {
-                      popup: 'animate__animated animate__fadeInDown'
-                    },
-                    hideClass: {
-                      popup: 'animate__animated animate__fadeOutUp'
-                    }
-                  });
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'User Created SuccessFully',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                  navigate('/');
+
                   navigate(from, {replace: true});
             })
     }
@@ -51,11 +52,11 @@ const Login = () => {
       };
 
     return (
-        <>
+        <Container>
             <Helmet>
                 <title>SH75 Academy | Login</title>
             </Helmet>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center mr-8  md:w-1/2 lg:text-left">
                     <Lottie animationData={login} loop={true} />
@@ -94,7 +95,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </Container>
     );
 };
 

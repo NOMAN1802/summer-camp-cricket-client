@@ -4,6 +4,7 @@ import Container from '../../components/Shared/Container';
 import { Helmet } from 'react-helmet';
 import Slider from '../../components/Slider/Slider';
 import BannerText from '../../components/BannerText/BannerText';
+import PopularClasses from '../../components/PopularClasses/PopularClasses';
 
 const Home = () => {
     return (
@@ -16,7 +17,7 @@ const Home = () => {
 
              <BannerText/>   
             <Slider></Slider>
-
+            <PopularClasses></PopularClasses>
             </div>
         </Container>
     );

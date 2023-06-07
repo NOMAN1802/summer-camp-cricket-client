@@ -1,0 +1,51 @@
+[
+    {
+      "class_name": "Tamim Blaster paying 11",
+      "image": "https://i.ibb.co/Fq40Tc7/tamim-iqbal-flicks-to-the-leg-side-23-03-2023.jpg",
+      "available_sit": 20,
+      "price": 2000,
+      "number_of_student": 14,
+      "instructor_name": "John Doe"
+    },
+    {
+      "class_name": "Classical Liton top 11 ",
+      "image": "https://i.ibb.co/BKzxBmP/0f2a29e68ee38e4a655a497e9a035c5c-XL.jpg",
+      "available_sit": 20,
+      "price": 1500,
+      "number_of_student": 10,
+      "instructor_name": "Liton Das"
+    },
+    {
+      "class_name": "Fantastic Shakib best 11",
+      "image": "https://i.ibb.co/cYscCZF/Shakib-al-hasan-IANS.jpg",
+      "available_sit": 20,
+      "price": 1200,
+      "number_of_student": 20,
+      "instructor_name": "Saakib Al Hasan"
+    },
+    {
+      "class_name": "Dependable Musfique dependable 11",
+      "image": "https://i.ibb.co/DbwrF1p/321822-6.jpg",
+      "available_sit": 20,
+      "price": 1800,
+      "number_of_student": 8,
+      "instructor_name": "Musfiqur Rahim"
+    },
+    {
+      "class_name": "Captain Masrafi super 11",
+      "image": "https://i.ibb.co/615JSrn/1607270195-8.jpg",
+      "available_sit": 20,
+      "price": 2200,
+      "number_of_student": 17,
+      "instructor_name": "Masrafi Bin Mortaza"
+    },
+    {
+      "class_name": "Cuter Master FIZ top eleven",
+      "image": "https://i.ibb.co/sRVcDw5/abu-dhabi-t10-mustafizur-added-to-players-draft.jpg",
+      "available_sit": 20,
+      "price": 2500,
+      "number_of_student": 15,
+      "instructor_name": "Mustafizur Rahman"
+    }
+  ]
+  
