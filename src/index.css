@@ -12,8 +12,27 @@
 .drawer-side a {
    background-color: transparent;
 }
+a.active{
+    border-bottom: 2px solid blue; 
+}
 .footer{
     position: relative;
     left: 0;
     bottom: 0;
 }
+
+/* Light Mode Styles */
+.bg.dark{
+    background-color: white;
+    color: black;
+  } 
+  
+  /* Dark Mode Styles */
+   .bg.light{
+    background-color: black;
+    color: white;
+  }
+  .color{
+    background-color: red;
+  }
+ 

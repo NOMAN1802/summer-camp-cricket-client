@@ -2,44 +2,25 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 
-const InstructorCard = ({instructor}) => {
+const InstructorCard = ({inst}) => {
+
     return (
-        <div className='col-span-1 cursor-pointer group'>
-        <div className='flex flex-col gap-2 w-full'>
-          <div
-            className='
-              aspect-square 
-              w-full 
-              relative 
-              overflow-hidden 
-              rounded-xl
-            '
-          >
-            <img
-              className='
-                object-cover 
-                h-full 
-                w-full 
-                group-hover:scale-110 
-                transition
-              '
-              src={instructor.instructor_image}
-              alt=''
-            />
-            <div
-              className='
-              absolute
-              top-3
-              right-3
-            '
-            >
-             
-            </div>
-          </div>
-          <div className='font-semibold text-center text-stone-400 text-lg'>{instructor.instructor_name}</div>
-          <div className='font-normal text-center text-stone-400 text-sm'>email: {instructor.instructor_email}</div>
+      <div className="card card-compact w-96 bg-base-100 shadow-xl">
+      <figure><img style={{width: '360px', height: '300px'}} src={inst.instructor_image} alt=""/></figure>
+      <div className="card-body">
+        <h2 className="text-2xl font-semibold text-stone-400 text-center">{inst.instructor_name}</h2>
+        <p className='text-sm text-stone-400 text-center'>{inst.instructor_email}</p>
+        <div>
+          {
+             (inst.number_of_student === inst.available_sit
+              ) ? 'color' : ''
+          }
+              
+          
         </div>
+        
       </div>
+    </div>
     );
 };
 

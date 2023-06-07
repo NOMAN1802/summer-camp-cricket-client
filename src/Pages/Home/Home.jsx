@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import Slider from '../../components/Slider/Slider';
 import BannerText from '../../components/BannerText/BannerText';
 import PopularClasses from '../../components/PopularClasses/PopularClasses';
+import PopularInstructor from '../../components/PopularInstructor/PopularInstructor';
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
             
             </div>
             <PopularClasses></PopularClasses>
+            <PopularInstructor></PopularInstructor>
         </Container>
     );
 };

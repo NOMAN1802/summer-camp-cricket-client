@@ -1,28 +1,29 @@
 [
     {
       "class_name": "Defensive Bating With Tamim",
-      "class_image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Faustraliansportscamps.com.au%2Fblog%2Fhow-to-teach-cricket-to-kids-beginners%2F&psig=AOvVaw26WhZfcI-q2lc-vyfSb-Qx&ust=1686223142019000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNi_pu2Esf8CFQAAAAAdAAAAABAE",
+      "class_image": "https://i.ibb.co/sV2sQZv/cricket-summer-camp-25days-bellandur-cricket-academy-primary-image-Haeo-Ybq-JDwab-Fp-RV-750-500.jpg",
       "instructor_image": "https://i.ibb.co/Fq40Tc7/tamim-iqbal-flicks-to-the-leg-side-23-03-2023.jpg",
       "available_sit": 20,
       "price": 2000,
       "number_of_student": 14,
       "instructor_name": "Tamim Iqbal",
-      "instructor_email":"tamim@iqbal.com"
+      "instructor_email": "tamim@iqbal.com"
     },
+   
     {
       "class_name": "Modern batting style with Liton ",
-      "class_image": "https://www.google.com/url?sa=i&url=http%3A%2F%2Fcompletecricket.com.au%2Fprivate-cricket-coaching%2F&psig=AOvVaw26WhZfcI-q2lc-vyfSb-Qx&ust=1686223142019000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNi_pu2Esf8CFQAAAAAdAAAAABAj",
+      "class_image": "https://i.ibb.co/PmRY24d/cricket-mad-kids.jpg",
       "instructor_image": "https://i.ibb.co/BKzxBmP/0f2a29e68ee38e4a655a497e9a035c5c-XL.jpg",
       "available_sit": 20,
       "price": 1500,
       "number_of_student": 10,
       "instructor_name": "Liton Das",
-      "instructor_email":"liton@das.com"
+      "instructor_email": "liton@das.com"
     },
     {
       "class_name": "Al-rounder tricks of Shakib",
       "instructor_image": "https://i.ibb.co/cYscCZF/Shakib-al-hasan-IANS.jpg",
-      "class_image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cric-life.com%2Farticle%2Fcricket-coaching-free-tips%2F&psig=AOvVaw1IJ_MnYTcLFGc9utkIko3k&ust=1686223874788000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMC-98qHsf8CFQAAAAAdAAAAABAX",
+      "class_image": "https://i.ibb.co/rG0LxqL/all-rounders-talentpro-cricket-academy-primary-image-Tfvzt-Fu-ULMZc-ERPi-750-500.jpg",
       "available_sit": 20,
       "price": 1200,
       "number_of_student": 20,
@@ -32,52 +33,52 @@
     {
       "class_name": "Wicket Keeping with Musfiq",
       "instructor_image": "https://i.ibb.co/wJBbxXY/2021-07-23-T064306-Z-1-LYNXMPEH6-M09-C-RTROPTP-3-CRICKET-WORLDCUP-WIN-BGD-1630903251878-166227441707.jpg",
-      "class_image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Faustraliansportscamps.com.au%2Fblog%2F5-ways-to-get-cricket-coaching-in-melbourne%2F&psig=AOvVaw32fjZJuvhySvkVOI2HODP7&ust=1686224091926000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMj53LKIsf8CFQAAAAAdAAAAABAE",
+      "class_image": "https://i.ibb.co/HzmTYYC/Cricket-Coaching-in-Melbourne.jpg",
       "available_sit": 20,
       "price": 1800,
       "number_of_student": 8,
       "instructor_name": "Musfiqur Rahim",
-      "instructor_email":"musfiq@rahim.com"
+      "instructor_email": "musfiq@rahim.com"
     },
     {
       "class_name": "Leading a Team With MASH",
       "instructor_image": "https://i.ibb.co/615JSrn/1607270195-8.jpg",
-      "class_image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amaven.co.uk%2Fblog%2F7-bat-ball-games-to-play-with-kids-who-are-new-to-cricket&psig=AOvVaw1elBSCd4UMeogXBqGgTfoQ&ust=1686224275356000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCJDN1YqJsf8CFQAAAAAdAAAAABAI",
+      "class_image": "https://i.ibb.co/KV2LdGX/slider-3.jpg",
       "available_sit": 20,
       "price": 2200,
       "number_of_student": 17,
       "instructor_name": "Masrafi Bin Mortaza",
-      "instructor_email":"masrafi@mortaza.com"
+      "instructor_email": "masrafi@mortaza.com"
     },
     {
       "class_name": "Cutter Of The FIZ",
       "instructor_image": "https://i.ibb.co/sRVcDw5/abu-dhabi-t10-mustafizur-added-to-players-draft.jpg",
-      "class_image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.familiesmagazine.com.au%2Fsaurabh-cricket-coaching%2F&psig=AOvVaw3nt9_z5t7_Sb3MEBBmog9c&ust=1686224462633000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKi6nuOJsf8CFQAAAAAdAAAAABAF",
+      "class_image": "https://i.ibb.co/QCX3rJh/slider-1.jpg",
       "available_sit": 20,
       "price": 2500,
       "number_of_student": 15,
       "instructor_name": "Mustafizur Rahman",
-      "instructor_email":"mustafizur@rahman.com"
+      "instructor_email": "mustafizur@rahman.com"
     },
     {
      "class_name": "Filding With Jonti Rhodge",
-      "instructor_image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.fnp.com%2Fgift%2Fjonty-rhodes-personalised-recorded-video-message&psig=AOvVaw0Bl79BLwEGElB0m6FzvkhS&ust=1686225218436000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCLD6jc-Msf8CFQAAAAAdAAAAABAS",
-      "class_image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.thephuketnews.com%2Fkajonkiet-phuket-kids-stump-up-for-cricket-coaching-36409.php&psig=AOvVaw3Orjbnbfb4PkVSFDFEbDAV&ust=1686225490487000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMCf7M2Nsf8CFQAAAAAdAAAAABAb",
+      "instructor_image": "https://i.ibb.co/hMMnnqz/C3-E2-E499-59-DE-4885-8-EE8-9-FED6480804-C-1532696637-rend-9-16.jpg",
+      "class_image": "https://i.ibb.co/0fQW1sd/slider-2.jpg",
       "available_sit": 20,
       "price": 2300,
       "number_of_student": 18,
       "instructor_name": "Jonti Rhodge",
-      "instructor_email":"Jonti@rhodge.com"
+      "instructor_email": "jonti@rhodge.com"
     },
     {
      "class_name": "Learn With Little Master",
-      "instructor_image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cricfrenzy.com%2Fen%2Farticle%2F149805%2FSharjah-stadium-stand-named-after-Sachin-Tendulkar&psig=AOvVaw1jKwrEpHli5HWzqmdaqS31&ust=1686225673114000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKimjqSOsf8CFQAAAAAdAAAAABAI",
-      "class_image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.asianage.com%2Fsports%2Fcricket%2F021218%2Fsachin-gets-into-coaching-mode-1.html&psig=AOvVaw07NdKSoKRWolNu9M3mQAjV&ust=1686225613623000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCJiXyomOsf8CFQAAAAAdAAAAABAE",
+      "instructor_image": "https://i.ibb.co/vDHcyhS/Sachin-Tendulkar.jpg",
+      "class_image": "https://i.ibb.co/g485Tcn/aa-Cover-hf2pkt57m5017dddaumobms7b5-20181202004541-Medi.jpg",
       "available_sit": 20,
       "price": 3300,
       "number_of_student": 19,
       "instructor_name": "Sachin Tendulkar",
-      "instructor_email":"sachin@tandulkar.com"
+      "instructor_email": "sachin@tandulkar.com"
     }
   ]
   
