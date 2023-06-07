@@ -2,6 +2,8 @@
 import React from 'react';
 import Container from '../../components/Shared/Container';
 import { Helmet } from 'react-helmet';
+import Slider from '../../components/Slider/Slider';
+import BannerText from '../../components/BannerText/BannerText';
 
 const Home = () => {
     return (
@@ -9,7 +11,13 @@ const Home = () => {
              <Helmet>
                 <title>SH75 Academy | Home</title>
             </Helmet>
-            <h2>This is Home</h2>
+            
+            <div className='grid grid-cols-1 md:grid-cols-2'>
+
+             <BannerText/>   
+            <Slider></Slider>
+
+            </div>
         </Container>
     );
 };
