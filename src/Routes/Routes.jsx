@@ -7,6 +7,7 @@ import Classes from "../Pages/Classes/Classes";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register"
 import DashboardLayOut from "../layouts/DashboardLayOut";
+import Instructor from "../Pages/Instructor/Instructor";
 
 
  export const router = createBrowserRouter([
@@ -21,6 +22,10 @@ import DashboardLayOut from "../layouts/DashboardLayOut";
         {
           path:'/classes',
           element:<Classes></Classes>
+        },
+        {
+          path:'/instructors',
+          element:<Instructor></Instructor>
         },
         {
           path:'/login',

@@ -13,11 +13,11 @@ const PopularClasses = () => {
         })
     },[])
     return (
-        <div className='mx-auto'>
-             <h1 className='text-center text-3xl text-stone-500 my-8'>Popular Classes</h1>
-           <div className=' grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-between'>
+        <div>
+             <h1 className='text-center text-3xl text-stone-500 my-8 font-semibold'>Popular Classes</h1>
+           <div className=' grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between items-center gap-4'>
              {
-                classes.map(popular => <PopularClassCard key={popular.price} popular ={popular}></PopularClassCard>)
+                classes.slice(0,6).map(popular => <PopularClassCard key={popular.price} popular ={popular}></PopularClassCard>)
              }
            </div>
 

@@ -17,8 +17,9 @@ const Home = () => {
 
              <BannerText/>   
             <Slider></Slider>
-            <PopularClasses></PopularClasses>
+            
             </div>
+            <PopularClasses></PopularClasses>
         </Container>
     );
 };
