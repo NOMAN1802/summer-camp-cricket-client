@@ -59,7 +59,7 @@ const Register = () => {
         <>
 
             <Helmet>
-                <title>BSH75 Academy | Sign Up</title>
+                <title>SH75 Academy | Register</title>
             </Helmet>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">

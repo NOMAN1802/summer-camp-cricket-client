@@ -17,7 +17,9 @@ const Header = () => {
     <li><NavLink to='/instructors'>Instructors</NavLink></li>
     <li><NavLink to='/classes'> Classes</NavLink></li>
 
-    <li><Link to="/dashboard">Dashboard</Link></li>
+    { user&&
+      <li><Link to="/dashboard">Dashboard</Link></li>
+    }
     
 
     {
