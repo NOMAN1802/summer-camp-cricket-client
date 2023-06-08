@@ -3,10 +3,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../Pages/providers/AuthProvider';
 
-
-
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
+
 
   const handleLogOut = () => {
     logOut()
@@ -63,7 +62,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-    
+      
         </div>
       </div>
     </div>

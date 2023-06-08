@@ -13,9 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   
   <AuthProvider>
      <HelmetProvider>
-     <div className='body'>
      <RouterProvider router={router} />
-     </div>
      </HelmetProvider>
      </AuthProvider>
   
