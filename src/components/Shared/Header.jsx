@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../Pages/providers/AuthProvider';
 
+
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
 
@@ -19,9 +20,9 @@ const Header = () => {
     <li><NavLink to='/classes'> Classes</NavLink></li>
 
     {user &&
-      <li><NavLink to="/dashboard">Dashboard</NavLink></li>
+      <li><NavLink to="/dashboard/myPortal">Dashboard</NavLink></li>
     }
-
+  
 
     {
       user ? <>

@@ -23,7 +23,7 @@ const PopularClassCard = ({popular}) => {
                 group-hover:scale-110 
                 transition
               '
-              src={popular.class_image}
+              src={popular.image}
               alt=''
             />
             <div

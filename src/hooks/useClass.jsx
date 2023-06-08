@@ -8,8 +8,9 @@ const useClass = () => {
     
     const {refetch, data: classes = []} = useQuery({
         queryKey: ['classes', user?.email],
+        enabled: !loading,
         queryFn: async ()=>{
-            const res = await fetch(`http://localhost:5000/popular?email=${user.email}`)
+            const res = await fetch(`http://localhost:5000/selectedClasses?email=${user.email}`)
             return res.json()
         },
        

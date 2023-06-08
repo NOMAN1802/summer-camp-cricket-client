@@ -8,6 +8,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register"
 import DashboardLayOut from "../layouts/DashboardLayOut";
 import Instructor from "../Pages/Instructor/Instructor";
+import MyPortal from "../Pages/Dashboard/MyPortal/MyPortal";
 
 
  export const router = createBrowserRouter([
@@ -39,7 +40,17 @@ import Instructor from "../Pages/Instructor/Instructor";
       ]
     },
       {
-        path:'/dashboard',
-        element:<DashboardLayOut/>
+        path:'dashboard',
+        element: <DashboardLayOut></DashboardLayOut>,
+        children:[
+          {
+            path:'myPortal',
+            element: <MyPortal></MyPortal>
+          }
+        ]
       }
   ]);
+
+
+      
+      
