@@ -6,6 +6,8 @@ import { AuthContext } from '../providers/AuthProvider';
 import useClass from '../../hooks/useClass';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useAdmin from '../../hooks/useAdmin';
+import useInstructor from '../../hooks/useInstructor';
 
 
 const ClassesCard = ({cls}) => {
@@ -14,7 +16,8 @@ const ClassesCard = ({cls}) => {
     const [classes, refetch] = useClass();
     const navigate = useNavigate();
     const location = useLocation();
-    
+    const {isAdmin, isAdminLoading} = useAdmin();
+    const {isInstructor, isInstructorLoading} = useInstructor();
     
    
     

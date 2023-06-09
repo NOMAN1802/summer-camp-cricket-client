@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { createContext, useEffect, useState } from 'react'
 import {
@@ -12,6 +13,7 @@ import {
   updateProfile,
 } from 'firebase/auth'
 import { app } from '../../firebase/firebase.config'
+import axios from 'axios'
 
 
 export const AuthContext = createContext(null)
@@ -22,6 +24,7 @@ const googleProvider = new GoogleAuthProvider()
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(true)
+
 
   const createUser = (email, password) => {
     setLoading(true)
@@ -55,16 +58,32 @@ const AuthProvider = ({ children }) => {
     })
   }
 
+
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, currentUser => {
       setUser(currentUser)
       console.log('current user', currentUser)
-      setLoading(false)
+
+      //jwt token 
+      if(currentUser){
+        axios.post('http://localhost:5000/jwt', {email: currentUser?.email})
+        .then(data =>{
+            localStorage.setItem('approve-token', data.data.token)
+            setLoading(false);
+        })
+    }
+    else{
+        localStorage.removeItem('approve-token')
+    }
     })
     return () => {
       return unsubscribe()
     }
   }, [])
+
+  
+ 
 
   const authInfo = {
     user,

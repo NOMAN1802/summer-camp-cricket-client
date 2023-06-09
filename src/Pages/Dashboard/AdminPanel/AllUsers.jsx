@@ -10,7 +10,7 @@ const AllUsers = () => {
         const res = await fetch('http://localhost:5000/users')
         return res.json()
     })
-    
+    console.log(users.role);
 
     const handleMakeAdmin = user =>{
         fetch(`http://localhost:5000/users/admin/${user._id}`, {
@@ -25,6 +25,25 @@ const AllUsers = () => {
                     position: 'top-end',
                     icon: 'success',
                     title: `${user.name} is an Admin Now!`,
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }
+        })
+    }
+    const handleMakeInstructor = user =>{
+        fetch(`http://localhost:5000/users/instructor/${user._id}`, {
+            method: 'PATCH'
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.modifiedCount){
+                refetch();
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: `${user.name} is an Instructor Now!`,
                     showConfirmButton: false,
                     timer: 1500
                   })
@@ -72,7 +91,7 @@ const AllUsers = () => {
                             <td>
                                 {user.name}
                             </td>
-                            <td>${user.email}</td>
+                            <td>{user.email}</td>
                             <td>
                                 {user.role}
                             </td>
@@ -82,7 +101,9 @@ const AllUsers = () => {
                                     }</td>
 
                             <td>
-                                <button  className="btn btn-ghost bg-black opacity-30 rounded-2xl text-white"><FaUser></FaUser></button>
+                                {user.role === 'instructor' ? 'instructor' :
+                                    <button onClick={()=> handleMakeInstructor(user)}  className="btn btn-ghost bg-black opacity-30 rounded-2xl text-white"><FaUser></FaUser></button>
+                                }
                             </td>
                         </tr>)
                     }

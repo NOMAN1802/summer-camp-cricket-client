@@ -1,7 +1,7 @@
 [
     {
       "class_name": "Defensive Bating With Tamim",
-      "class_image": "https://i.ibb.co/sV2sQZv/cricket-summer-camp-25days-bellandur-cricket-academy-primary-image-Haeo-Ybq-JDwab-Fp-RV-750-500.jpg",
+      "image": "https://i.ibb.co/sV2sQZv/cricket-summer-camp-25days-bellandur-cricket-academy-primary-image-Haeo-Ybq-JDwab-Fp-RV-750-500.jpg",
       "instructor_image": "https://i.ibb.co/Fq40Tc7/tamim-iqbal-flicks-to-the-leg-side-23-03-2023.jpg",
       "available_sit": 20,
       "price": 2000,
@@ -12,7 +12,7 @@
    
     {
       "class_name": "Modern batting style with Liton ",
-      "class_image": "https://i.ibb.co/PmRY24d/cricket-mad-kids.jpg",
+      "image": "https://i.ibb.co/PmRY24d/cricket-mad-kids.jpg",
       "instructor_image": "https://i.ibb.co/BKzxBmP/0f2a29e68ee38e4a655a497e9a035c5c-XL.jpg",
       "available_sit": 20,
       "price": 1500,
@@ -23,7 +23,7 @@
     {
       "class_name": "Al-rounder tricks of Shakib",
       "instructor_image": "https://i.ibb.co/cYscCZF/Shakib-al-hasan-IANS.jpg",
-      "class_image": "https://i.ibb.co/rG0LxqL/all-rounders-talentpro-cricket-academy-primary-image-Tfvzt-Fu-ULMZc-ERPi-750-500.jpg",
+      "image": "https://i.ibb.co/rG0LxqL/all-rounders-talentpro-cricket-academy-primary-image-Tfvzt-Fu-ULMZc-ERPi-750-500.jpg",
       "available_sit": 20,
       "price": 1200,
       "number_of_student": 20,
@@ -33,7 +33,7 @@
     {
       "class_name": "Wicket Keeping with Musfiq",
       "instructor_image": "https://i.ibb.co/wJBbxXY/2021-07-23-T064306-Z-1-LYNXMPEH6-M09-C-RTROPTP-3-CRICKET-WORLDCUP-WIN-BGD-1630903251878-166227441707.jpg",
-      "class_image": "https://i.ibb.co/HzmTYYC/Cricket-Coaching-in-Melbourne.jpg",
+      "image": "https://i.ibb.co/HzmTYYC/Cricket-Coaching-in-Melbourne.jpg",
       "available_sit": 20,
       "price": 1800,
       "number_of_student": 8,
@@ -43,7 +43,7 @@
     {
       "class_name": "Leading a Team With MASH",
       "instructor_image": "https://i.ibb.co/615JSrn/1607270195-8.jpg",
-      "class_image": "https://i.ibb.co/KV2LdGX/slider-3.jpg",
+      "image": "https://i.ibb.co/KV2LdGX/slider-3.jpg",
       "available_sit": 20,
       "price": 2200,
       "number_of_student": 17,
@@ -53,7 +53,7 @@
     {
       "class_name": "Cutter Of The FIZ",
       "instructor_image": "https://i.ibb.co/sRVcDw5/abu-dhabi-t10-mustafizur-added-to-players-draft.jpg",
-      "class_image": "https://i.ibb.co/QCX3rJh/slider-1.jpg",
+      "image": "https://i.ibb.co/QCX3rJh/slider-1.jpg",
       "available_sit": 20,
       "price": 2500,
       "number_of_student": 15,
@@ -63,7 +63,7 @@
     {
      "class_name": "Filding With Jonti Rhodge",
       "instructor_image": "https://i.ibb.co/hMMnnqz/C3-E2-E499-59-DE-4885-8-EE8-9-FED6480804-C-1532696637-rend-9-16.jpg",
-      "class_image": "https://i.ibb.co/0fQW1sd/slider-2.jpg",
+      "image": "https://i.ibb.co/0fQW1sd/slider-2.jpg",
       "available_sit": 20,
       "price": 2300,
       "number_of_student": 18,
@@ -73,7 +73,7 @@
     {
      "class_name": "Learn With Little Master",
       "instructor_image": "https://i.ibb.co/vDHcyhS/Sachin-Tendulkar.jpg",
-      "class_image": "https://i.ibb.co/g485Tcn/aa-Cover-hf2pkt57m5017dddaumobms7b5-20181202004541-Medi.jpg",
+      "image": "https://i.ibb.co/g485Tcn/aa-Cover-hf2pkt57m5017dddaumobms7b5-20181202004541-Medi.jpg",
       "available_sit": 20,
       "price": 3300,
       "number_of_student": 19,

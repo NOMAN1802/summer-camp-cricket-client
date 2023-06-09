@@ -2,17 +2,16 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../Pages/providers/AuthProvider';
-// import useAdmin from '../../hooks/useAdmin';
-// import useInstructor from '../../hooks/useInstructor';
+import useAdmin from '../../hooks/useAdmin';
+import useInstructor from '../../hooks/useInstructor';
+import useStudent from '../../hooks/useStudent';
 
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
-  // TODO 
-  // const [isAdmin] = useAdmin();
-  const isAdmin = true;
-  // const isInstructor = useInstructor();
-  const isInstructor = false;
+  const [isAdmin] = useAdmin();
+  const [isInstructor] = useInstructor();
+  const [isStudent] = useStudent();
 
   const handleLogOut = () => {
     logOut()
@@ -25,20 +24,26 @@ const Header = () => {
     <li><NavLink to='/instructors'>Instructors</NavLink></li>
     <li><NavLink to='/classes'> Classes</NavLink></li>
 
-   <>
-   {/* {user &&
-      <li><NavLink to="/dashboard/myPortal">Dashboard</NavLink></li>
+    {user &&
+          
+       
+            isAdmin ?
+    
+            (<li><NavLink to="dashboard/adminPanel">Dashboard</NavLink></li>) :
+    
+            isInstructor ? (
+              <li><NavLink to="dashboard/instructorPanel">Dashboard</NavLink></li>
+            ) :
+               ''
+          
+        }
+    
+    {
+      user && 
+       isStudent ? (
+        <li><NavLink to="dashboard/myPortal">Dashboard</NavLink></li>
+      ) : ''
     }
-   {isAdmin &&
-      <li><NavLink to="/dashboard/adminPanel">Dashboard</NavLink></li>
-    } */}
-   </>
-   <>
-   {
-    isAdmin ? (<li><NavLink to="/dashboard/adminPanel">Dashboard</NavLink></li>) :  isInstructor ?(<li> <NavLink to="/dashboard/myPortal">Dashboard</NavLink></li>) :(<li> <NavLink to="/dashboard/myPortal">Dashboard</NavLink></li>)
-   }
-   </>
-  
 
     {
       user ? <>

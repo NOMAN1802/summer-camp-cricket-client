@@ -9,18 +9,18 @@ import { FaHome, FaUser, FaUsers, FaWallet } from 'react-icons/fa';
 import { CgMenu } from 'react-icons/cg';
 import { AiOutlineTeam } from 'react-icons/ai';
 import useClass from '../hooks/useClass';
-// import useAdmin from '../hooks/useAdmin';
-// import useInstructor from '../hooks/useInstructor';
+import useAdmin from '../hooks/useAdmin';
+import useInstructor from '../hooks/useInstructor';
 
 const DashboardLayOut = () => {
 
     const { user } = useContext(AuthContext);
     const [classes, refetch] = useClass();
     // TODO
-    // const [isAdmin] = useAdmin();
-    const isAdmin = true;
-    // const [isInstructor] = useInstructor();
-    const isInstructor = false;
+    const [isAdmin] = useAdmin();
+    // const isAdmin = true;
+    const [isInstructor] = useInstructor();
+    // const isInstructor = false;
     return (
         <div>
             <Helmet>
@@ -31,6 +31,7 @@ const DashboardLayOut = () => {
                 <div className="drawer lg:drawer-open">
                     <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                     <div className="drawer-content flex flex-col items-center justify-center">
+                        {/* Content  */}
                         <Outlet></Outlet>
                         <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
@@ -50,50 +51,35 @@ const DashboardLayOut = () => {
                                     </div>
                                 </div>
 
-                                <div className='mt-2 text-center text-stone-500 font-semibold'>{user?.displayName}</div>
-                                <div className='mt-2 text-center text-stone-500 font-semibold'>
+                                <p className='mt-2 text-center text-white font-semibold'>{user?.displayName}</p>
+                                <p className='mt-2 text-center text-white font-semibold'>
                                     {user?.email}
-                                </div>
+                                </p>
 
                             </div>
-                            {/* {isAdmin?   <><li><NavLink className='my-2' to='adminPanel'><FaHome></FaHome> Admin Home  <small>{classes?.length}</small></NavLink></li>
-                            <li><NavLink className='my-2' to='/classes'><CgMenu></CgMenu> ALL Classes</NavLink></li>
-                            <li><NavLink className='my-2' to='/'><FaWallet></FaWallet> Payment History</NavLink></li>
-                            <li><NavLink className='my-2 mt-4' to='/'><FaHome></FaHome> Home</NavLink></li>
-                            <li><NavLink className='my-2' to='/instructors'><AiOutlineTeam></AiOutlineTeam> My Instructors</NavLink></li>
-                            </>
-                            
-                            :
-                            <>
-                            <li><NavLink className='my-2' to='myPortal'><FaHome></FaHome>My Portal  <small>{classes?.length}</small></NavLink></li>
-                            <li><NavLink className='my-2' to='/classes'><CgMenu></CgMenu> ALL Classes</NavLink></li>
-                            <li><NavLink className='my-2' to='/'><FaWallet></FaWallet> Payment History</NavLink></li>
-                            <li><NavLink className='my-2 mt-4' to='/'><FaHome></FaHome> Home</NavLink></li>
-                           <li><NavLink className='my-2' to='/instructors'><AiOutlineTeam></AiOutlineTeam> My Instructors</NavLink></li></>
-                          } */}
 
 
                             {
                                 isAdmin ?
 
-                                    (<div><li><NavLink className='my-2' to='adminPanel'><FaUser></FaUser> Admin Home  <small>{classes?.length}</small></NavLink></li>
+                                    (<div><li><NavLink className='my-2' to='adminPanel'><FaUser></FaUser>Admin Home </NavLink></li>
                                         <li><NavLink className='my-2' to='/classes'><CgMenu></CgMenu> ALL Classes</NavLink></li>
                                         <li><NavLink className='my-2 mt-4' to='/'><FaHome></FaHome> Home</NavLink></li>
                                         <li><NavLink className='my-2' to='allUsers'><FaUsers></FaUsers> All Users</NavLink></li></div>) :
 
                                     isInstructor ? (
                                         <div>
-                                            <li><NavLink className='my-2' to='myPortal'><FaHome></FaHome>My Portal  <small>{classes?.length}</small></NavLink></li>
+                                            <li><NavLink className='my-2' to='instructorPanel'><FaHome></FaHome>Instructor Home</NavLink></li>
                                             <li><NavLink className='my-2' to='/classes'><CgMenu></CgMenu> ALL Classes</NavLink></li>
                                             <li><NavLink className='my-2 mt-4' to='/'><FaHome></FaHome> Home</NavLink></li>
-                                            <li><NavLink className='my-2' to='/instructors'><AiOutlineTeam></AiOutlineTeam> My Instructors</NavLink></li>
+                                            <li><NavLink className='my-2' to='/instructors'><AiOutlineTeam></AiOutlineTeam>My Added Class</NavLink></li>
                                         </div>
                                     ) :
                                         (
 
                                             <div>
 
-                                                <li><NavLink className='my-2' to='myPortal'><FaHome></FaHome>My Portal  <small>{classes?.length}</small></NavLink></li>
+                                                <li><NavLink className='my-2' to='myPortal'><FaHome></FaHome>My Portal </NavLink></li>
                                                 <li><NavLink className='my-2' to='/classes'><CgMenu></CgMenu> ALL Classes</NavLink></li>
                                                 <li><NavLink className='my-2' to='/'><FaWallet></FaWallet> Payment History</NavLink></li>
                                                 <li><NavLink className='my-2 mt-4' to='/'><FaHome></FaHome> Home</NavLink></li>

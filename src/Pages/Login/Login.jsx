@@ -36,11 +36,11 @@ const Login = () => {
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
-                    title: 'User Created SuccessFully',
+                    title: 'User Login Successfully ',
                     showConfirmButton: false,
                     timer: 1500
                   })
-                  navigate('/');
+                  
 
                   navigate(from, {replace: true});
             })
