@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Container from '../../components/Shared/Container';
 import { AuthContext } from '../providers/AuthProvider';
 import useClass from '../../hooks/useClass';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+
 
 const ClassesCard = ({cls}) => {
     const {_id,class_name, image, price, email,} = cls
@@ -13,7 +14,10 @@ const ClassesCard = ({cls}) => {
     const [classes, refetch] = useClass();
     const navigate = useNavigate();
     const location = useLocation();
-
+    
+    
+   
+    
     const handleAddClass = cls => {
         // console.log(cls);
         if(user && user.email){
@@ -58,12 +62,7 @@ const ClassesCard = ({cls}) => {
             }
         }
 
-        const handleClick = (cls) => {
-            // Disable the button
-            setIsButtonDisabled(!isButtonDisabled);
-          
-          };
-
+  
     return (
         <Container>
             {
@@ -101,13 +100,13 @@ const ClassesCard = ({cls}) => {
 
         
               
-         { (user && user.role) == 'student'?
+         { user === 'admin' ?
          
          <button className='btn btn-accent' disabled>Select</button>
-         :
-         <>{<button  onClick={() => handleAddClass(cls)}className='btn btn-accent' >Select</button>}</>
-        }  
-        
+          :
+         <button  onClick={() => handleAddClass(cls)}className='btn btn-accent' >Select</button>
+         
+          }
           {/* <button onClick={() => handleAddClass(cls)} className='btn btn-accent'>Select</button> */}
          
       </div>

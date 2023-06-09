@@ -9,12 +9,16 @@ import { FaHome, FaWallet } from 'react-icons/fa';
 import { CgMenu } from 'react-icons/cg';
 import { AiOutlineTeam } from 'react-icons/ai';
 import useClass from '../hooks/useClass';
+import useAdmin from '../hooks/useAdmin';
+import useInstructor from '../hooks/useInstructor';
 
 const DashboardLayOut = () => {
 
     const { user } = useContext(AuthContext);
     const [classes, refetch] = useClass();
-    
+    // const [isAdmin] = useAdmin();
+    const isAdmin = true;
+    const [isInstructor] = useInstructor();
     return (
         <div>
             <Helmet>
@@ -34,29 +38,68 @@ const DashboardLayOut = () => {
                         <ul className="menu p-4 w-80 h-full bg-black opacity-60 text-white ">
                             {/* Sidebar content here */}
                             <div className='mt-8 text-center'>
-                                
-                               
+
+
                                 <div className="avatar online w-12 mx-2 m-auto">
                                     <div className="w-24 rounded-full">
                                         <img src={user?.photoURL} />
-                                        
-                                        
+
+
                                     </div>
                                 </div>
-                                
+
                                 <div className='mt-2 text-center text-stone-500 font-semibold'>{user?.displayName}</div>
                                 <div className='mt-2 text-center text-stone-500 font-semibold'>
-                                  {user?.email}
+                                    {user?.email}
                                 </div>
-                                
+
                             </div>
+                            {/* {isAdmin?   <><li><NavLink className='my-2' to='adminPanel'><FaHome></FaHome> Admin Home  <small>{classes?.length}</small></NavLink></li>
+                            <li><NavLink className='my-2' to='/classes'><CgMenu></CgMenu> ALL Classes</NavLink></li>
+                            <li><NavLink className='my-2' to='/'><FaWallet></FaWallet> Payment History</NavLink></li>
+                            <li><NavLink className='my-2 mt-4' to='/'><FaHome></FaHome> Home</NavLink></li>
+                            <li><NavLink className='my-2' to='/instructors'><AiOutlineTeam></AiOutlineTeam> My Instructors</NavLink></li>
+                            </>
+                            
+                            :
+                            <>
                             <li><NavLink className='my-2' to='myPortal'><FaHome></FaHome>My Portal  <small>{classes?.length}</small></NavLink></li>
                             <li><NavLink className='my-2' to='/classes'><CgMenu></CgMenu> ALL Classes</NavLink></li>
                             <li><NavLink className='my-2' to='/'><FaWallet></FaWallet> Payment History</NavLink></li>
-                            
                             <li><NavLink className='my-2 mt-4' to='/'><FaHome></FaHome> Home</NavLink></li>
-                            <li><NavLink className='my-2' to='/instructors'><AiOutlineTeam></AiOutlineTeam> My Instructors</NavLink></li>
-                         
+                           <li><NavLink className='my-2' to='/instructors'><AiOutlineTeam></AiOutlineTeam> My Instructors</NavLink></li></>
+                          } */}
+
+
+                            {
+                                isAdmin ?
+
+                                    (<div><li><NavLink className='my-2' to='adminPanel'><FaHome></FaHome> Admin Home  <small>{classes?.length}</small></NavLink></li>
+                                        <li><NavLink className='my-2' to='/classes'><CgMenu></CgMenu> ALL Classes</NavLink></li>
+                                        <li><NavLink className='my-2 mt-4' to='/'><FaHome></FaHome> Home</NavLink></li>
+                                        <li><NavLink className='my-2' to='/instructors'><AiOutlineTeam></AiOutlineTeam> My Instructors</NavLink></li></div>) :
+
+                                    isInstructor ? (
+                                        <div>
+                                            <li><NavLink className='my-2' to='myPortal'><FaHome></FaHome>My Portal  <small>{classes?.length}</small></NavLink></li>
+                                            <li><NavLink className='my-2' to='/classes'><CgMenu></CgMenu> ALL Classes</NavLink></li>
+                                            <li><NavLink className='my-2 mt-4' to='/'><FaHome></FaHome> Home</NavLink></li>
+                                            <li><NavLink className='my-2' to='/instructors'><AiOutlineTeam></AiOutlineTeam> My Instructors</NavLink></li>
+                                        </div>
+                                    ) :
+                                        (
+
+                                            <div>
+
+                                                <li><NavLink className='my-2' to='myPortal'><FaHome></FaHome>My Portal  <small>{classes?.length}</small></NavLink></li>
+                                                <li><NavLink className='my-2' to='/classes'><CgMenu></CgMenu> ALL Classes</NavLink></li>
+                                                <li><NavLink className='my-2' to='/'><FaWallet></FaWallet> Payment History</NavLink></li>
+                                                <li><NavLink className='my-2 mt-4' to='/'><FaHome></FaHome> Home</NavLink></li>
+                                                <li><NavLink className='my-2' to='/instructors'><AiOutlineTeam></AiOutlineTeam> My Instructors</NavLink></li>
+                                            </div>
+
+                                        )
+                            }
                         </ul>
 
                     </div>

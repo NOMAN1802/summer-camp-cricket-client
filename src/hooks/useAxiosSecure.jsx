@@ -13,10 +13,10 @@ const useAxiosSecure = () => {
 
   useEffect(() => {
     axiosSecure.interceptors.request.use((config) => {
-      const token = localStorage.getItem('approve-token');
-      if (token) {
-        config.headers.Authorization = `Bearer ${token}`;
-      }
+      // const token = localStorage.getItem('approve-token');
+      // if (token) {
+      //   config.headers.Authorization = `Bearer ${token}`;
+      // }
       return config;
     });
 
