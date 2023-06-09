@@ -5,20 +5,22 @@ import Footer from '../components/Shared/Footer';
 import { Helmet } from 'react-helmet';
 import { NavLink, Outlet } from 'react-router-dom';
 import { AuthContext } from '../Pages/providers/AuthProvider';
-import { FaHome, FaWallet } from 'react-icons/fa';
+import { FaHome, FaUser, FaUsers, FaWallet } from 'react-icons/fa';
 import { CgMenu } from 'react-icons/cg';
 import { AiOutlineTeam } from 'react-icons/ai';
 import useClass from '../hooks/useClass';
-import useAdmin from '../hooks/useAdmin';
-import useInstructor from '../hooks/useInstructor';
+// import useAdmin from '../hooks/useAdmin';
+// import useInstructor from '../hooks/useInstructor';
 
 const DashboardLayOut = () => {
 
     const { user } = useContext(AuthContext);
     const [classes, refetch] = useClass();
+    // TODO
     // const [isAdmin] = useAdmin();
     const isAdmin = true;
-    const [isInstructor] = useInstructor();
+    // const [isInstructor] = useInstructor();
+    const isInstructor = false;
     return (
         <div>
             <Helmet>
@@ -35,7 +37,7 @@ const DashboardLayOut = () => {
                     </div>
                     <div className="drawer-side">
                         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                        <ul className="menu p-4 w-80 h-full bg-black opacity-60 text-white ">
+                        <ul className="menu p-4 w-80 h-full bg-stone-500 opacity-60 text-white ">
                             {/* Sidebar content here */}
                             <div className='mt-8 text-center'>
 
@@ -74,10 +76,10 @@ const DashboardLayOut = () => {
                             {
                                 isAdmin ?
 
-                                    (<div><li><NavLink className='my-2' to='adminPanel'><FaHome></FaHome> Admin Home  <small>{classes?.length}</small></NavLink></li>
+                                    (<div><li><NavLink className='my-2' to='adminPanel'><FaUser></FaUser> Admin Home  <small>{classes?.length}</small></NavLink></li>
                                         <li><NavLink className='my-2' to='/classes'><CgMenu></CgMenu> ALL Classes</NavLink></li>
                                         <li><NavLink className='my-2 mt-4' to='/'><FaHome></FaHome> Home</NavLink></li>
-                                        <li><NavLink className='my-2' to='/instructors'><AiOutlineTeam></AiOutlineTeam> My Instructors</NavLink></li></div>) :
+                                        <li><NavLink className='my-2' to='allUsers'><FaUsers></FaUsers> All Users</NavLink></li></div>) :
 
                                     isInstructor ? (
                                         <div>

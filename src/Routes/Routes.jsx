@@ -11,6 +11,7 @@ import Instructor from "../Pages/Instructor/Instructor";
 import MyPortal from "../Pages/Dashboard/MyPortal/MyPortal";
 import PrivateRoute from "./PrivateRoute";
 import AdminPanel from "../Pages/Dashboard/AdminPanel/AdminPanel";
+import AllUsers from "../Pages/Dashboard/AdminPanel/AllUsers";
 
 
  export const router = createBrowserRouter([
@@ -54,6 +55,10 @@ import AdminPanel from "../Pages/Dashboard/AdminPanel/AdminPanel";
           {
             path:'adminPanel',
             element:<AdminPanel></AdminPanel>
+          },
+          {
+            path:'allUsers',
+            element: <AllUsers></AllUsers>
           }
         ]
       }

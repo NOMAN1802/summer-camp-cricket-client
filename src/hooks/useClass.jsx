@@ -6,7 +6,7 @@ import { useQuery } from '@tanstack/react-query';
 const useClass = () => {
     const {user, loading} = useContext(AuthContext);
     
-    const {refetch, data: classes = []} = useQuery({
+    const { data: classes = [], refetch} = useQuery({
         queryKey: ['classes', user?.email],
         enabled: !loading,
         queryFn: async ()=>{

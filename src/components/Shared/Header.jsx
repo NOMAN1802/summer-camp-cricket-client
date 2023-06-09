@@ -2,8 +2,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../Pages/providers/AuthProvider';
-import useAdmin from '../../hooks/useAdmin';
-import useInstructor from '../../hooks/useInstructor';
+// import useAdmin from '../../hooks/useAdmin';
+// import useInstructor from '../../hooks/useInstructor';
 
 
 const Header = () => {
@@ -11,7 +11,8 @@ const Header = () => {
   // TODO 
   // const [isAdmin] = useAdmin();
   const isAdmin = true;
-  const isInstructor = useInstructor();
+  // const isInstructor = useInstructor();
+  const isInstructor = false;
 
   const handleLogOut = () => {
     logOut()
