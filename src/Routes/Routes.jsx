@@ -13,6 +13,7 @@ import PrivateRoute from "./PrivateRoute";
 import AdminPanel from "../Pages/Dashboard/AdminPanel/AdminPanel";
 import AllUsers from "../Pages/Dashboard/AdminPanel/AllUsers";
 import InstructorPanel from "../Pages/Dashboard/InstructorPanel/InstructorPanel";
+import AddClass from "../Pages/Dashboard/InstructorPanel/AddClass";
 
 
  export const router = createBrowserRouter([
@@ -64,6 +65,9 @@ import InstructorPanel from "../Pages/Dashboard/InstructorPanel/InstructorPanel"
           {
             path:'instructorPanel',
             element:<InstructorPanel></InstructorPanel>
+          },{
+            path:'addClass',
+            element:<AddClass></AddClass>
           }
         ]
       }
