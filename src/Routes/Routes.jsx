@@ -54,11 +54,11 @@ import ManageClasses from "../Pages/Dashboard/AdminPanel/ManageClasses";
         children:[
           {
             path:'myPortal',
-            element: <MyPortal></MyPortal>
+            element: <PrivateRoute><MyPortal></MyPortal></PrivateRoute>
           },
           {
             path:'adminPanel',
-            element:<AdminPanel></AdminPanel>
+            element:<PrivateRoute><AdminPanel></AdminPanel></PrivateRoute>
           },
           {
             path:'allUsers',
@@ -70,7 +70,7 @@ import ManageClasses from "../Pages/Dashboard/AdminPanel/ManageClasses";
           },
           {
             path:'instructorPanel',
-            element:<InstructorPanel></InstructorPanel>
+            element:<PrivateRoute><InstructorPanel></InstructorPanel></PrivateRoute>
           },{
             path:'addClass',
             element:<AddClass></AddClass>

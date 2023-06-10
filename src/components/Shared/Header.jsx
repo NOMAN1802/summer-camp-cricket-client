@@ -29,10 +29,10 @@ const Header = () => {
        
             isAdmin ?
     
-            (<li><NavLink to="dashboard/adminPanel">Dashboard</NavLink></li>) :
+            (<li><NavLink to="/dashboard/adminPanel">Dashboard</NavLink></li>) :
     
             isInstructor ? (
-              <li><NavLink to="dashboard/instructorPanel">Dashboard</NavLink></li>
+              <li><NavLink to="/dashboard/instructorPanel">Dashboard</NavLink></li>
             ) :
                ''
           
@@ -41,7 +41,7 @@ const Header = () => {
     {
       user && 
        isStudent ? (
-        <li><NavLink to="dashboard/myPortal">Dashboard</NavLink></li>
+        <li><NavLink to="/dashboard/myPortal">Dashboard</NavLink></li>
       ) : ''
     }
 

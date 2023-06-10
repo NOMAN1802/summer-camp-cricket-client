@@ -93,7 +93,7 @@ const ManageClasses = () => {
 
     return (
         <div className='w-full'>
-            <h1 className='text-center text-3xl text-stone-500 my-8 font-semibold'>All Users: {classes.length}</h1>
+            <h1 className='text-center text-3xl text-stone-500 my-8 font-semibold'>All Classes: {classes.length}</h1>
 
             <div className="overflow-x-auto">
                 <table className="table">
