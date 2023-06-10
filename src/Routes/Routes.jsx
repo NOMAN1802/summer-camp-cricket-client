@@ -14,6 +14,7 @@ import AdminPanel from "../Pages/Dashboard/AdminPanel/AdminPanel";
 import AllUsers from "../Pages/Dashboard/AdminPanel/AllUsers";
 import InstructorPanel from "../Pages/Dashboard/InstructorPanel/InstructorPanel";
 import AddClass from "../Pages/Dashboard/InstructorPanel/AddClass";
+import MyClass from "../Pages/Dashboard/InstructorPanel/MyClass";
 
 
  export const router = createBrowserRouter([
@@ -68,6 +69,10 @@ import AddClass from "../Pages/Dashboard/InstructorPanel/AddClass";
           },{
             path:'addClass',
             element:<AddClass></AddClass>
+          },
+          {
+            path:'myClass',
+            element:<MyClass></MyClass>
           }
         ]
       }

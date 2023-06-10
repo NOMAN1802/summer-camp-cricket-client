@@ -72,7 +72,8 @@ const DashboardLayOut = () => {
                                             <li><NavLink className='my-2' to='instructorPanel'><FaHome></FaHome>Instructor Home</NavLink></li>
                                             <li><NavLink className='my-2' to='/classes'><CgMenu></CgMenu> ALL Classes</NavLink></li>
                                             <li><NavLink className='my-2 mt-4' to='/'><FaHome></FaHome> Home</NavLink></li>
-                                            <li><NavLink className='my-2' to='addClass'><AiOutlineTeam></AiOutlineTeam>Added Class</NavLink></li>
+                                            <li><NavLink className='my-2' to='addClass'><AiOutlineTeam></AiOutlineTeam>Add A Class</NavLink></li>
+                                            <li><NavLink className='my-2' to='myClass'><AiOutlineTeam></AiOutlineTeam> My Classes</NavLink></li>
                                         </div>
                                     ) :
                                         (
