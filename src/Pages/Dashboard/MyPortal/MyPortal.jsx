@@ -4,6 +4,7 @@ import Container from '../../../components/Shared/Container';
 import useClass from '../../../hooks/useClass';
 import { FaRegTrashAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
+import { NavLink } from 'react-router-dom';
 
 const MyPortal = () => {
     const [classes, refetch] = useClass();
@@ -45,7 +46,7 @@ const MyPortal = () => {
            <div className='grid sm:grid-cols-1 md:grid-cols-3 justify-center items-center'>
            <h1 className='text-center text-lg text-stone-400 my-4 '>Total Classes {classes.length}</h1>
             <h1 className='text-center text-lg text-stone-400 my-4 '>Total tuition fee: {total} </h1>
-            <button className='btn btn-accent btn-sm m-12'>Pay</button>
+           
            </div>
             <div className="overflow-x-auto">
                 <table className="table">
@@ -59,6 +60,7 @@ const MyPortal = () => {
                             <th>Name</th>
                             <th>Price</th>
                             <th>Delete</th>
+                            <th>Payment</th>
 
                         </tr>
                     </thead>
@@ -83,6 +85,10 @@ const MyPortal = () => {
                                 <td>${cls.price}</td>
                                 <td>
                                     <button  onClick={() => handleDelete(cls)}  className="btn btn-ghost bg-red-400  text-white"><FaRegTrashAlt></FaRegTrashAlt></button>
+                                </td>
+                                <td>
+                                <NavLink to='/dashboard/payment'> <button className='btn btn-accent btn-sm m-12'>Pay</button></NavLink>
+
                                 </td>
                             </tr>)
                         }
