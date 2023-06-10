@@ -7,7 +7,9 @@
       "price": 2000,
       "number_of_student": 14,
       "instructor_name": "Tamim Iqbal",
-      "instructor_email": "tamim@iqbal.com"
+      "instructor_email": "tamim@iqbal.com",
+      "status": "approve"
+
     },
    
     {
@@ -18,7 +20,8 @@
       "price": 1500,
       "number_of_student": 10,
       "instructor_name": "Liton Das",
-      "instructor_email": "liton@das.com"
+      "instructor_email": "liton@das.com",
+      "status": "approve"
     },
     {
       "class_name": "Al-rounder tricks of Shakib",
@@ -28,7 +31,8 @@
       "price": 1200,
       "number_of_student": 20,
       "instructor_name": "Saakib Al Hasan",
-      "instructor_email":"shakib@hasan.com"
+      "instructor_email":"shakib@hasan.com",
+      "status": "approve"
     },
     {
       "class_name": "Wicket Keeping with Musfiq",
@@ -38,7 +42,8 @@
       "price": 1800,
       "number_of_student": 8,
       "instructor_name": "Musfiqur Rahim",
-      "instructor_email": "musfiq@rahim.com"
+      "instructor_email": "musfiq@rahim.com",
+      "status": "approve"
     },
     {
       "class_name": "Leading a Team With MASH",
@@ -48,7 +53,8 @@
       "price": 2200,
       "number_of_student": 17,
       "instructor_name": "Masrafi Bin Mortaza",
-      "instructor_email": "masrafi@mortaza.com"
+      "instructor_email": "masrafi@mortaza.com",
+      "status": "approve"
     },
     {
       "class_name": "Cutter Of The FIZ",
@@ -58,7 +64,8 @@
       "price": 2500,
       "number_of_student": 15,
       "instructor_name": "Mustafizur Rahman",
-      "instructor_email": "mustafizur@rahman.com"
+      "instructor_email": "mustafizur@rahman.com",
+      "status": "pending"
     },
     {
      "class_name": "Filding With Jonti Rhodge",
@@ -68,7 +75,8 @@
       "price": 2300,
       "number_of_student": 18,
       "instructor_name": "Jonti Rhodge",
-      "instructor_email": "jonti@rhodge.com"
+      "instructor_email": "jonti@rhodge.com",
+      "status": "approve"
     },
     {
      "class_name": "Learn With Little Master",
@@ -78,7 +86,8 @@
       "price": 3300,
       "number_of_student": 19,
       "instructor_name": "Sachin Tendulkar",
-      "instructor_email": "sachin@tandulkar.com"
+      "instructor_email": "sachin@tandulkar.com",
+      "status": "approve"
     }
   ]
   

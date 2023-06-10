@@ -1,17 +1,19 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../../providers/AuthProvider';
 
 
 const MyClass = () => {
     const [myClass, setMyClass] = useState([]);
+    const{user, loading} =useContext(AuthContext)
     useEffect(()=>{
-        fetch('http://localhost:5000/addClass')
+        fetch(`http://localhost:5000/addClass/${user?.email}`)
         .then(res=> res.json())
         .then(data =>{
-            console.log(data);
+            // console.log(data);
             setMyClass(data)
         })
-    },[])
+    },[user.email])
     return (
         <div className='w-2/3'>
             <h1 className='text-center text-3xl text-stone-500 my-8 font-semibold'>My Classes</h1>
@@ -51,10 +53,10 @@ const MyClass = () => {
                                     </div>
                                 </td>
                                 <td>
-                                    {cls.name}
+                                    {cls.class_name}
                                 </td>
                                 <td>${cls.price}</td>
-                                <td>{cls.available_set}</td>
+                                <td>{cls.available_sit - cls.number_of_student}</td>
                                 <td>{cls.status}</td>
                                 {/* <td>
                                     <button  onClick={() => handleDelete(cls)}  className="btn btn-ghost bg-red-400  text-white"><FaUpload></FaUpload></button>

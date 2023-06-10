@@ -38,7 +38,7 @@ const AddClass = () => {
                     showConfirmButton: false,
                     timer: 1500
                   })
-                  navigate('/');
+                  navigate('/dashboard/myClass');
 
                 } 
              })
@@ -61,7 +61,7 @@ const AddClass = () => {
 
                     <input type="text"
                         className="text-input shadow-lg"
-                        {...register("name")}
+                        {...register("class_name")}
                         placeholder="Class Name"
                     />
                 </div>
@@ -73,7 +73,7 @@ const AddClass = () => {
                     </label>
                     <input
                         className="text-input shadow-lg"
-                        {...register("instructor")}
+                        {...register("instructor_name")}
                         placeholder="Instructor Name"
                         value={user.displayName}
                         readOnly
@@ -89,7 +89,7 @@ const AddClass = () => {
                     <input
                         className="text-input shadow-lg"
                         value={user?.email}
-                        {...register("email")}
+                        {...register("instructor_email")}
                         placeholder="Instructor email"
                         type="email"
                         readOnly
@@ -105,7 +105,7 @@ const AddClass = () => {
                         {...register("image")}
                         placeholder="image link"
                         type="url"
-                        defaultValue="https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        
                     />
 
                 </div>
@@ -117,8 +117,12 @@ const AddClass = () => {
                     </label>
                     <input
                         className="text-input shadow-lg"
-                        {...register("price", { required: true })}
-                        type='number'
+                        {...register("price", {
+                            valueAsNumber: true,
+                            pattern:{
+                               value: /^(0|[1-9]\d*)(\.\d+)?$/
+                            },
+                          })}
                         placeholder="price"
 
                     />
@@ -134,8 +138,33 @@ const AddClass = () => {
 
                     <input
                         className="text-input shadow-lg"
-                        {...register("available_set")}
+                        
+                        {...register("available_sit", {
+                            valueAsNumber: true,
+                            pattern:{
+                               value: /^(0|[1-9]\d*)(\.\d+)?$/
+                            },
+                          })}
                         placeholder="Available set"
+
+                    />
+                </div>
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">Number of Students</span>
+                    </label>
+
+
+                    <input
+                        className="text-input shadow-lg"
+                        
+                        {...register("number_of_student", {
+                            valueAsNumber: true,
+                            pattern:{
+                               value: /^(0|[1-9]\d*)(\.\d+)?$/
+                            },
+                          })}
+                        placeholder="Number of student"
 
                     />
                 </div>

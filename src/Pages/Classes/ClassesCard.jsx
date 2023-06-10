@@ -18,6 +18,7 @@ const ClassesCard = ({cls}) => {
     const location = useLocation();
     const {isAdmin, isAdminLoading} = useAdmin();
     const {isInstructor, isInstructorLoading} = useInstructor();
+    const [isButtonDisabled, setIsButtonDisabled] = useState(false);
     
    
     
@@ -37,6 +38,7 @@ const ClassesCard = ({cls}) => {
             .then(data => {
                 console.log(data);
                 if(data.insertedId){
+                  setIsButtonDisabled(true);
                     refetch(); 
                     Swal.fire({
                         position: 'top-end',
@@ -107,7 +109,7 @@ const ClassesCard = ({cls}) => {
          
          <button className='btn btn-accent' disabled>Select</button>
           :
-         <button  onClick={() => handleAddClass(cls)}className='btn btn-accent' >Select</button>
+         <button  onClick={() => handleAddClass(cls)}className='btn btn-accent' disabled={isButtonDisabled} >Select</button>
          
           }
           {/* <button onClick={() => handleAddClass(cls)} className='btn btn-accent'>Select</button> */}

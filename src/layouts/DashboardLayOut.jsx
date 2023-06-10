@@ -7,6 +7,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import { AuthContext } from '../Pages/providers/AuthProvider';
 import { FaHome, FaUser, FaUsers, FaWallet } from 'react-icons/fa';
 import { CgMenu } from 'react-icons/cg';
+import { SiGoogleclassroom } from 'react-icons/si';
 import { AiOutlineTeam } from 'react-icons/ai';
 import useClass from '../hooks/useClass';
 import useAdmin from '../hooks/useAdmin';
@@ -65,7 +66,11 @@ const DashboardLayOut = () => {
                                     (<div><li><NavLink className='my-2' to='adminPanel'><FaUser></FaUser>Admin Home </NavLink></li>
                                         <li><NavLink className='my-2' to='/classes'><CgMenu></CgMenu> ALL Classes</NavLink></li>
                                         <li><NavLink className='my-2 mt-4' to='/'><FaHome></FaHome> Home</NavLink></li>
-                                        <li><NavLink className='my-2' to='allUsers'><FaUsers></FaUsers> All Users</NavLink></li></div>) :
+                                        <li><NavLink className='my-2' to='allUsers'><FaUsers></FaUsers> All Users</NavLink></li>
+                                        <li><NavLink className='my-2' to='manageClasses'> <SiGoogleclassroom></SiGoogleclassroom> Manage Classes</NavLink></li>
+                                        
+                                        </div>
+                                        ) :
 
                                     isInstructor ? (
                                         <div>
