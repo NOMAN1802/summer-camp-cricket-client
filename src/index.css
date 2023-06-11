@@ -21,17 +21,6 @@ a.active{
     bottom: 0;
 }
 
-/* Light Mode Styles */
-.bg.dark{
-    background-color: white;
-    color: black;
-  } 
-  
-  /* Dark Mode Styles */
-   .bg.light{
-    background-color: black;
-    color: white;
-  }
   .red-background{
     background-color: red;
   }

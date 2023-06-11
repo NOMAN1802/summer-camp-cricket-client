@@ -78,41 +78,65 @@ const CheckoutForm = ({ classes, price }) => {
 
         console.log('payment intent', paymentIntent)
         setProcessing(false)
-        if (paymentIntent.status === 'succeeded') {
-          Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: `${user.displayName} You pay successfully`,
-            showConfirmButton: false,
-            timer: 1500
-          })
+        if (paymentIntent?.status === 'succeeded') {
+          
             setTransactionId(paymentIntent.id);
             // save payment information to the server
+
+
+    //         const payment = {
+    //             email: user?.email,
+    //             transactionId: paymentIntent.id,
+    //             price,
+    //             date: new Date(),
+    //             quantity: classes.length,
+    //             cartItems: classes.map(item => item._id),
+    //             menuItems: classes.map(item => item.menuItemId),
+    //             status: 'service pending',
+    //             itemNames: classes.map(item => item.name)
+    //         }
+    //         axiosSecure.post('/payments', payment)
+    //             .then(res => {
+    //                 console.log(res.data);
+    //                 if (res.data.insertedId) {
+    //                     // display confirm
+    //                 }
+    //             })
+    //     }
+
+
+    }
             const payment = {
                 name: user.displayName,
                 email: user?.email,
-                transactionId: paymentIntent.id,
+                transactionId: paymentIntent?.id,
                 price,
-                paymentClassId: classes._id,
+                paymentClassId: classes?._id,
                 course: classes.class_name,
                 date: new Date(),
-                quantity: classes.length,
-                cartItems: classes.map(item => item._id),
-                // // classId: classes.map(item => item.menuItemId),
-                // status: 'service pending',
-                // itemNames: classes.map(item => item.name)
+                total_enroll: classes.length,
+                status: 'paid',
+                
             }
             axiosSecure.post('/payments', payment)
                 .then(res => {
                     console.log(res.data);
-                    if (res.data.insertedResult) {
-                    //  
-                    }
+                     if(res.data.insertedResult){
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: `${user.displayName} You pay successfully`,
+                            showConfirmButton: false,
+                            timer: 1500
+                          })
+                     }
+                       
+                     
                 })
         }
 
 
-    }
+    
 
     return (
         <>

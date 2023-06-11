@@ -61,6 +61,10 @@ import Payment from "../Pages/Dashboard/MyPortal/Payment";
             path:'payment/:id',
             element:<Payment></Payment>
           },
+          // {
+          //   path:'payment',
+          //   element:<Payment></Payment>
+          // },
           {
             path:'adminPanel',
             element:<PrivateRoute><AdminPanel></AdminPanel></PrivateRoute>

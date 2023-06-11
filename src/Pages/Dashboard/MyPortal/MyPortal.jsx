@@ -5,7 +5,7 @@ import Container from '../../../components/Shared/Container';
 import useClass from '../../../hooks/useClass';
 import { FaRegTrashAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const MyPortal = () => {
     const [classes, refetch] = useClass();
@@ -47,6 +47,9 @@ const MyPortal = () => {
            <div className='grid sm:grid-cols-1 md:grid-cols-3 justify-center items-center'>
            <h1 className='text-center text-lg text-stone-400 my-4 '>Total Classes {classes.length}</h1>
             <h1 className='text-center text-lg text-stone-400 my-4 '>Total tuition fee: {total} </h1>
+            {/* <Link to="/dashboard/payment">
+                    <button className="btn btn-warning btn-sm">PAY</button>
+                </Link> */}
            
            </div>
             <div className="overflow-x-auto">
