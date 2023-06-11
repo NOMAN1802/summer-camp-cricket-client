@@ -6,7 +6,7 @@ import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import { AuthContext } from '../../providers/AuthProvider';
 
 const AdminPanel = () => {
-    const {use} = useContext(AuthContext);
+    const {user} = useContext(AuthContext);
     const [axiosSecure] = useAxiosSecure();
 
     const { data: stats = {} } = useQuery({

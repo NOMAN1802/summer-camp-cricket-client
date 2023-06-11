@@ -5,6 +5,7 @@ import { FaUserShield } from 'react-icons/fa';
 import { FcApproval, FcDisapprove } from 'react-icons/fc';
 import Swal from 'sweetalert2';
 
+
 const ManageClasses = () => {
     const { data: classes = [], refetch } = useQuery(['classes'], async () => {
         const res = await fetch('http://localhost:5000/classes')

@@ -74,7 +74,8 @@ const AuthProvider = ({ children }) => {
         })
     }
     else{
-        localStorage.removeItem('approve-token')
+        localStorage.removeItem('approve-token');
+        setLoading(false);
     }
     })
     return () => {

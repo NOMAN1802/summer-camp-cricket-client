@@ -19,7 +19,7 @@ const ClassesCard = ({ cls }) => {
   const { isAdmin, isAdminLoading } = useAdmin();
   const { isInstructor, isInstructorLoading } = useInstructor();
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
-
+ 
 
 
   const [users, setUsers] = useState([]);
@@ -32,7 +32,11 @@ const ClassesCard = ({ cls }) => {
       })
   }, [])
 
-
+const userRole = users?.map(user=> user.role) 
+// const admin = users.filter(user => user.role === 'admin')
+// const instructor = users.filter(user => user.role === 'instructor')
+// const student = users.filter(user => user.role === 'student')
+// console.log(admin, student, instructor);
   const handleAddClass = cls => {
     // console.log(cls);
     if (user && user.email) {
@@ -95,7 +99,7 @@ const ClassesCard = ({ cls }) => {
                 <p className='text-sm text-stone-400 text-center'>Available set: 0</p>
               </div>
 
-              <button className='btn btn-accent' disabled>Select</button>
+              {/* <button className='btn btn-accent' disabled>Select</button> */}
 
 
             </div>
@@ -115,14 +119,14 @@ const ClassesCard = ({ cls }) => {
               </div>
 
               {
-                users[0]?.role === 'admin' ?
+              userRole ===  'admin' ?
 
                   (
                     <button onClick={() => handleAddClass(cls)} className='btn btn-accent' disabled>Select</button>
                   
                   ) :
 
-                 users[0]?.role === 'instructor' ? (
+                  userRole ===    'instructor' ? (
                     
                       <button onClick={() => handleAddClass(cls)} className='btn btn-accent' disabled>Select</button>
                     

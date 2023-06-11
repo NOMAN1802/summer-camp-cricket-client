@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import Container from '../../../components/Shared/Container';
@@ -87,7 +88,7 @@ const MyPortal = () => {
                                     <button  onClick={() => handleDelete(cls)}  className="btn btn-ghost bg-red-400  text-white"><FaRegTrashAlt></FaRegTrashAlt></button>
                                 </td>
                                 <td>
-                                <NavLink to='/dashboard/payment'> <button className='btn btn-accent btn-sm m-12'>Pay</button></NavLink>
+                                <NavLink to={`/dashboard/payment/${cls._id}`}> <button className='btn btn-accent btn-sm m-12'>Pay</button></NavLink>
 
                                 </td>
                             </tr>)

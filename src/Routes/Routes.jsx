@@ -58,7 +58,7 @@ import Payment from "../Pages/Dashboard/MyPortal/Payment";
             element: <PrivateRoute><MyPortal></MyPortal></PrivateRoute>
           },
           {
-            path:'payment',
+            path:'payment/:id',
             element:<Payment></Payment>
           },
           {
