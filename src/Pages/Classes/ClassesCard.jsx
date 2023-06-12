@@ -24,7 +24,7 @@ const ClassesCard = ({ cls }) => {
 
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/users')
+    fetch('https://sakib-cricket-academy-server-noman1802.vercel.app/users')
       .then(res => res.json())
       .then(data => {
         console.log(data);
@@ -42,7 +42,7 @@ const userRole = users?.map(user=> user.role)
     if (user && user.email) {
       const classInfo = { classId: _id, class_name, price, image, email: user.email, status: user.role }
       console.log(classInfo);
-      fetch('http://localhost:5000/selectedClasses', {
+      fetch('https://sakib-cricket-academy-server-noman1802.vercel.app/selectedClasses', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'

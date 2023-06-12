@@ -7,6 +7,8 @@ import BannerText from '../../components/BannerText/BannerText';
 import PopularClasses from '../../components/PopularClasses/PopularClasses';
 import PopularInstructor from '../../components/PopularInstructor/PopularInstructor';
 import ContactUs from '../../components/ContactUs/ContactUs';
+import Sessions from '../../components/Sessions/Sessions';
+
 
 const Home = () => {
     return (
@@ -23,7 +25,9 @@ const Home = () => {
             </div>
             <PopularClasses></PopularClasses>
             <PopularInstructor></PopularInstructor>
+            <Sessions></Sessions>
             <ContactUs className ='my-12'></ContactUs>
+            
         </Container>
     );
 };

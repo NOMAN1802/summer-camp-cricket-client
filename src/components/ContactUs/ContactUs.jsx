@@ -1,6 +1,8 @@
 import { TileLayer, Marker, Popup, MapContainer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./map.css";
+import { Fade } from "react-awesome-reveal";
+
 const ContactUs = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -13,7 +15,8 @@ const ContactUs = () => {
           Connect with Us <br className="block md:hidden" /> and Ignite
           Learning!
         </h2>
-        <p className="text-stone-500">
+      <Fade>
+      <p className="text-stone-500">
           We are here to assist you! If you have any questions, feedback, or
           need assistance with our Summer Cricket Camp, feel free to get in touch
           with our dedicated team. Our knowledgeable and friendly staff are
@@ -22,6 +25,7 @@ const ContactUs = () => {
           and are committed to ensuring your satisfaction. Lets make your
           Summer Cricket Camp memorable!
         </p>
+      </Fade>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 md:justify-center gap-4 md:gap-16">
         <div

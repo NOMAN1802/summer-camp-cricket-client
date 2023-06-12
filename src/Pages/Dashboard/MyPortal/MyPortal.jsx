@@ -23,7 +23,7 @@ const MyPortal = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/selectedClasses/${cls._id}`, {
+                fetch(`https://sakib-cricket-academy-server-noman1802.vercel.app/selectedClasses/${cls._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

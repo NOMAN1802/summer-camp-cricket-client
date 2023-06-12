@@ -12,7 +12,7 @@ const Classes = () => {
     
 
     useEffect(()=>{
-        fetch("http://localhost:5000/classes/approved")
+        fetch("https://sakib-cricket-academy-server-noman1802.vercel.app/classes/approved")
         .then(res=> res.json())
         .then(data =>{
             // console.log(data); 

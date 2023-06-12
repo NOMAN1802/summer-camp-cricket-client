@@ -19,7 +19,7 @@ const AddClass = () => {
     const onSubmit = (data) => {
         // data.sub_category = selectedOption;
 
-        fetch("http://localhost:5000/addClass", {
+        fetch("https://sakib-cricket-academy-server-noman1802.vercel.app/addClass", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -103,6 +103,19 @@ const AddClass = () => {
                     <input
                         className="text-input shadow-lg"
                         {...register("image")}
+                        placeholder="image link"
+                        type="url"
+                        
+                    />
+
+                </div>
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">Instructor image</span>
+                    </label>
+                    <input
+                        className="text-input shadow-lg"
+                        {...register("instructor_image")}
                         placeholder="image link"
                         type="url"
                         

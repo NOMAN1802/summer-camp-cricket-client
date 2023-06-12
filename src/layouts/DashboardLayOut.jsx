@@ -63,11 +63,12 @@ const DashboardLayOut = () => {
                             {
                                 isAdmin ?
 
-                                    (<div><li><NavLink className='my-2' to='adminPanel'><FaUser></FaUser>Admin Home </NavLink></li>
+                                    (    <div><li><NavLink className='my-2' to='adminPanel'><FaUser></FaUser>Admin Home    </ NavLink></li>
+                                       
+                                        <li><NavLink className='my-2' to='manageClasses'> <SiGoogleclassroom></SiGoogleclassroom> Manage Classes</NavLink></li>
+                                        <li><NavLink className='my-2' to='allUsers'><FaUsers></FaUsers> All Users</NavLink></li>
                                         <li><NavLink className='my-2' to='/classes'><CgMenu></CgMenu> ALL Classes</NavLink></li>
                                         <li><NavLink className='my-2 mt-4' to='/'><FaHome></FaHome> Home</NavLink></li>
-                                        <li><NavLink className='my-2' to='allUsers'><FaUsers></FaUsers> All Users</NavLink></li>
-                                        <li><NavLink className='my-2' to='manageClasses'> <SiGoogleclassroom></SiGoogleclassroom> Manage Classes</NavLink></li>
                                         
                                         </div>
                                         ) :
@@ -75,10 +76,12 @@ const DashboardLayOut = () => {
                                     isInstructor ? (
                                         <div>
                                             <li><NavLink className='my-2' to='instructorPanel'><FaHome></FaHome>Instructor Home</NavLink></li>
+                                            <li><NavLink className='my-2' to='myClass'><AiOutlineTeam></AiOutlineTeam> My Classes</NavLink></li>
+                                            <li><NavLink className='my-2' to='addClass'><AiOutlineTeam></AiOutlineTeam>Add A Class</NavLink></li>
                                             <li><NavLink className='my-2' to='/classes'><CgMenu></CgMenu> ALL Classes</NavLink></li>
                                             <li><NavLink className='my-2 mt-4' to='/'><FaHome></FaHome> Home</NavLink></li>
-                                            <li><NavLink className='my-2' to='addClass'><AiOutlineTeam></AiOutlineTeam>Add A Class</NavLink></li>
-                                            <li><NavLink className='my-2' to='myClass'><AiOutlineTeam></AiOutlineTeam> My Classes</NavLink></li>
+                                            
+                                            
                                         </div>
                                     ) :
                                         (

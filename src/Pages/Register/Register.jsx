@@ -27,7 +27,7 @@ const Register = () => {
            updateUserProfile(data.name, data.photoURL)
            .then(()=>{
                 const saveInfo = {name: data.name, email: data.email, photoURL: data.photoURL, role: data.role }
-                fetch('http://localhost:5000/users',{
+                fetch('https://sakib-cricket-academy-server-noman1802.vercel.app/users',{
                    method: 'POST',
                    headers: {
                     'content-type': 'application/json'

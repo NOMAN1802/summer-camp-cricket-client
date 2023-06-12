@@ -18,12 +18,14 @@ import MyClass from "../Pages/Dashboard/InstructorPanel/MyClass";
 import ManageClasses from "../Pages/Dashboard/AdminPanel/ManageClasses";
 import Payment from "../Pages/Dashboard/MyPortal/Payment";
 import MyEnroll from "../Pages/Dashboard/MyPortal/MyEnroll";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 
  export const router = createBrowserRouter([
     {
       path: "/",
       element: <Main/>,
+      errorElement:<ErrorPage></ErrorPage>,
       children : [
         {
             path: '/',

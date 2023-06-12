@@ -10,7 +10,7 @@ const useClass = () => {
         queryKey: ['classes', user?.email],
         enabled: !loading,
         queryFn: async ()=>{
-            const res = await fetch(`http://localhost:5000/selectedClasses?email=${user.email}`,{headers:{
+            const res = await fetch(`https://sakib-cricket-academy-server-noman1802.vercel.app/selectedClasses?email=${user.email}`,{headers:{
                 authorization: `bearer ${token}`
             }})
             return res.json()

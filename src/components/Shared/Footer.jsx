@@ -10,7 +10,7 @@ const Footer = () => {
             <div className='footer bg-opacity-40 bg-black text-white'>
 
                 <div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 justify-between">
+                    <div className="grid  lg:grid-cols-3 justify-around">
                         <div className='ps-8 mt-4'>
                             <div>
                                 <img className='rounded-xl mr-4' src="https://i.ibb.co/w7tSfv2/1000-F-499625910-gh-BBx-V9-Rs-HAWLQVPJd-Tp-F49io-BP9ak1-Z.jpg" alt="" height={50} width={60} />

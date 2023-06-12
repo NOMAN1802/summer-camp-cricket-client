@@ -67,9 +67,9 @@ const AuthProvider = ({ children }) => {
 
       //jwt token 
       if(currentUser){
-        axios.post('http://localhost:5000/jwt', {email: currentUser?.email})
+        axios.post('https://sakib-cricket-academy-server-noman1802.vercel.app/jwt', {email: currentUser?.email})
         .then(data =>{
-            localStorage.setItem('approve-token', data.data.token)
+            localStorage.setItem('approve-token', data?.data?.token)
             setLoading(false);
         })
     }

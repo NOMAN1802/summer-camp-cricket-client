@@ -9,22 +9,8 @@ const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway_Key)
 const Payment = () => {
     const {id} = useParams();
     const [classes] = useClass();
-    const total = classes?.reduce((sum, item) => (sum = 0) + item.price, 0);
+    const total = classes?.reduce((sum, item) => (sum = 0) + item?.price, 0);
     
-
-    // const price = classes.find(item => item.price)
-
-
-    // const [classes, setClasses] = useState([]);
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/selectedClasses/${id}`)
-    //       .then(res => res.json())
-    //       .then(data => {
-    //         setClasses(data); // Update the state with the fetched data
-    //       });
-    //   }, [id]);
-    //   console.log(classes);
-    // const total = classes?.reduce((sum, item) => sum + item.price, 0);
     return (
         <div>
             <h2 className='text-2xl font-semibold text-stone-500'>Pay Now!</h2>

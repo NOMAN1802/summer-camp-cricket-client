@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Pages/providers/AuthProvider';
 
 const axiosSecure = axios.create({
-  baseURL: 'http://localhost:5000', 
+  baseURL: 'https://sakib-cricket-academy-server-noman1802.vercel.app', 
 });
 
 const useAxiosSecure = () => {

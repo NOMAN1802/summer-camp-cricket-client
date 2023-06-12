@@ -7,7 +7,7 @@ const MyEnroll = () => {
     const [myClass, setMyClass] = useState([]);
     const{user, loading} =useContext(AuthContext)
     useEffect(()=>{
-        fetch(`http://localhost:5000/enroll/${user?.email}`)
+        fetch(`https://sakib-cricket-academy-server-noman1802.vercel.app/enroll/${user?.email}`)
         .then(res=> res.json())
         .then(data =>{
             // console.log(data);

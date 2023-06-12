@@ -9,7 +9,7 @@ const Instructor = () => {
     
     const [instructors, setInstructors] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/classes')
+        fetch('https://sakib-cricket-academy-server-noman1802.vercel.app/classes')
         .then(res=> res.json())
         .then(data =>{
             console.log(data);

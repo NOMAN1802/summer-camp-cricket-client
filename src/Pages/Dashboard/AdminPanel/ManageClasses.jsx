@@ -8,12 +8,12 @@ import Swal from 'sweetalert2';
 
 const ManageClasses = () => {
     const { data: classes = [], refetch } = useQuery(['classes'], async () => {
-        const res = await fetch('http://localhost:5000/classes')
+        const res = await fetch('https://sakib-cricket-academy-server-noman1802.vercel.app/classes')
         return res.json()
     })
 
     const handleApproved = cls => {
-        fetch(`http://localhost:5000/classes/approved/${cls._id}`, {
+        fetch(`https://sakib-cricket-academy-server-noman1802.vercel.app/classes/approved/${cls._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -32,7 +32,7 @@ const ManageClasses = () => {
             })
     }
     const handleApprovedFeedback = cls => {
-        fetch(`http://localhost:5000/classes/feedbackApprove/${cls._id}`, {
+        fetch(`https://sakib-cricket-academy-server-noman1802.vercel.app/classes/feedbackApprove/${cls._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -52,7 +52,7 @@ const ManageClasses = () => {
     }
 
     const handleDenied = cls => {
-        fetch(`http://localhost:5000/classes/denied/${cls._id}`, {
+        fetch(`https://sakib-cricket-academy-server-noman1802.vercel.app/classes/denied/${cls._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -73,7 +73,7 @@ const ManageClasses = () => {
 
 
     const handleDeniedFeedback = cls => {
-        fetch(`http://localhost:5000/classes/feedbackDenied/${cls._id}`, {
+        fetch(`https://sakib-cricket-academy-server-noman1802.vercel.app/classes/feedbackDenied/${cls._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())

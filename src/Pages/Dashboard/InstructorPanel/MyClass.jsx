@@ -1,19 +1,20 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
+import { FaMedapps } from 'react-icons/fa';
 
 
 const MyClass = () => {
     const [myClass, setMyClass] = useState([]);
     const{user, loading} =useContext(AuthContext)
     useEffect(()=>{
-        fetch(`http://localhost:5000/addClass/${user?.email}`)
+        fetch(`https://sakib-cricket-academy-server-noman1802.vercel.app/getBy/${user?.email}`)
         .then(res=> res.json())
         .then(data =>{
-            // console.log(data);
+            console.log(data);
             setMyClass(data)
         })
-    },[user.email])
+    },[user?.email])
     return (
         <div className='w-2/3'>
             <h1 className='text-center text-3xl text-stone-500 my-8 font-semibold'>My Classes</h1>
@@ -34,6 +35,8 @@ const MyClass = () => {
                             <th>Price</th>
                             <th>Sets</th>
                             <th>Status</th>
+                            <th>Feedback</th>
+                            <th>Update</th>
 
                         </tr>
                     </thead>
@@ -58,9 +61,10 @@ const MyClass = () => {
                                 <td>${cls.price}</td>
                                 <td>{cls.available_sit - cls.number_of_student}</td>
                                 <td>{cls.status}</td>
-                                {/* <td>
-                                    <button  onClick={() => handleDelete(cls)}  className="btn btn-ghost bg-red-400  text-white"><FaUpload></FaUpload></button>
-                                </td> */}
+                                <td>{cls?.feedback}</td>
+                                <td>
+                                    <button  className="btn btn-ghost  text-stone-400">Update</button>
+                                </td>
                             </tr>)
                         }
 

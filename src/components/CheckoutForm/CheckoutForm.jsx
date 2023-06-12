@@ -5,7 +5,7 @@ import { useState } from "react";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import { AuthContext } from "../../Pages/providers/AuthProvider";
 import Swal from "sweetalert2";
-import { toast } from "react-hot-toast";
+
 
 
 
@@ -82,28 +82,7 @@ const CheckoutForm = ({ classes, price }) => {
         if (paymentIntent?.status === 'succeeded') {
           
             setTransactionId(paymentIntent.id);
-            // save payment information to the server
-
-
-    //         const payment = {
-    //             email: user?.email,
-    //             transactionId: paymentIntent.id,
-    //             price,
-    //             date: new Date(),
-    //             quantity: classes.length,
-    //             cartItems: classes.map(item => item._id),
-    //             menuItems: classes.map(item => item.menuItemId),
-    //             status: 'service pending',
-    //             itemNames: classes.map(item => item.name)
-    //         }
-    //         axiosSecure.post('/payments', payment)
-    //             .then(res => {
-    //                 console.log(res.data);
-    //                 if (res.data.insertedId) {
-    //                     // display confirm
-    //                 }
-    //             })
-    //     }
+            // Save information Of payment in Data base
 
 
     }
@@ -125,13 +104,13 @@ const CheckoutForm = ({ classes, price }) => {
                 .then(res => {
                     console.log(res.data);
                      if(res.data.insertedResult){
-                        //  Swal.fire({
-                        //     position: 'top-end',
-                        //     icon: 'success',
-                        //     title: `${user.displayName} You pay successfully`,
-                        //     showConfirmButton: false,
-                        //     timer: 1500
-                        //   })
+                         Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: `${user.displayName} You pay successfully`,
+                            showConfirmButton: false,
+                            timer: 1500
+                          })
                      }
                        
                      
@@ -162,18 +141,14 @@ const CheckoutForm = ({ classes, price }) => {
                         },
                     }}
                 />
-                <button className="btn btn-primary btn-sm mt-4" type="submit">
+                
+                <button className="btn btn-ghost border-blue-400 btn-sm mt-4" type="submit" disabled={!stripe || !clientSecret || processing}>
                     Pay
                 </button>
+
             </form>
-            {cardError && toast.error('Payment Failed')}
-            {transactionId &&  Swal.fire({
-                            position: 'top-end',
-                            icon: 'success',
-                            title: 'Payment success',
-                            showConfirmButton: false,
-                            timer: 1500
-                          }) }
+            {cardError && <p className="text-stone-700 ml-8">{cardError}</p>}
+            {transactionId && <p className="text-stone-500">Transaction complete with transactionId: {transactionId}</p>}
         </>
     );
 };
