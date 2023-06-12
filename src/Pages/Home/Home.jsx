@@ -6,6 +6,7 @@ import Slider from '../../components/Slider/Slider';
 import BannerText from '../../components/BannerText/BannerText';
 import PopularClasses from '../../components/PopularClasses/PopularClasses';
 import PopularInstructor from '../../components/PopularInstructor/PopularInstructor';
+import ContactUs from '../../components/ContactUs/ContactUs';
 
 const Home = () => {
     return (
@@ -22,6 +23,7 @@ const Home = () => {
             </div>
             <PopularClasses></PopularClasses>
             <PopularInstructor></PopularInstructor>
+            <ContactUs className ='my-12'></ContactUs>
         </Container>
     );
 };

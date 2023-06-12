@@ -86,10 +86,10 @@ const DashboardLayOut = () => {
                                             <div>
 
                                                 <li><NavLink className='my-2' to='myPortal'><FaHome></FaHome>My Portal </NavLink></li>
+                                                <li><NavLink className='my-2' to='paymentHistory'><FaWallet></FaWallet> Payment History</NavLink></li>
                                                 <li><NavLink className='my-2' to='/classes'><CgMenu></CgMenu> ALL Classes</NavLink></li>
-                                                <li><NavLink className='my-2' to='/'><FaWallet></FaWallet> Payment History</NavLink></li>
-                                                <li><NavLink className='my-2 mt-4' to='/'><FaHome></FaHome> Home</NavLink></li>
                                                 <li><NavLink className='my-2' to='/instructors'><AiOutlineTeam></AiOutlineTeam> My Instructors</NavLink></li>
+                                                <li><NavLink className='my-2 mt-4' to='/'><FaHome></FaHome> Home</NavLink></li>
                                             </div>
 
                                         )

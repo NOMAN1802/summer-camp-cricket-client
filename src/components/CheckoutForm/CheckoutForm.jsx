@@ -5,6 +5,7 @@ import { useState } from "react";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import { AuthContext } from "../../Pages/providers/AuthProvider";
 import Swal from "sweetalert2";
+import { toast } from "react-hot-toast";
 
 
 
@@ -111,6 +112,8 @@ const CheckoutForm = ({ classes, price }) => {
                 email: user?.email,
                 transactionId: paymentIntent?.id,
                 price,
+                image: classes.image,
+                class_name: classes.class_name,
                 paymentClassId: classes?._id,
                 course: classes.class_name,
                 date: new Date(),
@@ -122,13 +125,13 @@ const CheckoutForm = ({ classes, price }) => {
                 .then(res => {
                     console.log(res.data);
                      if(res.data.insertedResult){
-                        Swal.fire({
-                            position: 'top-end',
-                            icon: 'success',
-                            title: `${user.displayName} You pay successfully`,
-                            showConfirmButton: false,
-                            timer: 1500
-                          })
+                        //  Swal.fire({
+                        //     position: 'top-end',
+                        //     icon: 'success',
+                        //     title: `${user.displayName} You pay successfully`,
+                        //     showConfirmButton: false,
+                        //     timer: 1500
+                        //   })
                      }
                        
                      
@@ -140,7 +143,8 @@ const CheckoutForm = ({ classes, price }) => {
 
     return (
         <>
-        
+         <p className="text-stone-400 text-sm mx-auto">Please insert your card number to enroll and enjoy the class!!!</p>
+
             <form className="full m-8" onSubmit={handleSubmit}>
                 <CardElement
                     options={{
@@ -162,9 +166,14 @@ const CheckoutForm = ({ classes, price }) => {
                     Pay
                 </button>
             </form>
-            <p className="text-stone-400 text-sm mx-auto">Please insert your card number to enroll and enjoy the class!!!</p>
-            {cardError && <p className="text-red-600 ml-8">{cardError}</p>}
-            {transactionId && <p className="text-green-500">Transaction complete with transactionId: {transactionId}</p>}
+            {cardError && toast.error('Payment Failed')}
+            {transactionId &&  Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'Payment success',
+                            showConfirmButton: false,
+                            timer: 1500
+                          }) }
         </>
     );
 };
